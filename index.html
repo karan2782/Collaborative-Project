@@ -28,7 +28,7 @@
             /* justify-content: space-evenly; */
             align-items: center;
             padding-right: 50px;
-            
+
         }
 
         .nav-icon>span {
@@ -145,17 +145,109 @@
         main {
             margin: 200px 0 0 0;
             height: 900px;
-            border: 2px solid black;
+            /* border: 2px solid black; */
         }
-       
 
-        @media all and (min-width:540px) and (max-width:1080px){
-            header>div{
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            border: 2px solid black;
+            width: 90%;
+            margin: auto;
+
+        }
+
+        .grid-container>div {
+            border: 1px solid black;
+            height: 400px;
+            padding-bottom: 10px;
+            position: relative;
+        }
+
+        .image-shoes {
+            width: 100%;
+            height: 272px;
+        }
+
+        .image-shoes>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .text>p {
+            color: #0c2340;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            margin: 4px 0 4px 4px;
+        }
+
+        .text>h4 {
+            margin: 4px 0 4px 4px;
+        }
+
+        .text>h4:nth-of-type(1) {
+            color: #0c2340;
+            letter-spacing: 0.5px;
+            font-size: 16px;
+            margin: 4px 0 4px 4px;
+        }
+
+        .text-first {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            justify-content: space-between;
+            margin: 4px 0 4px 4px;
+
+        }
+
+        .circle-tick {
+            display: flex;
+            font-size: 14px;
+            margin: 4px 0 4px 4px;
+
+        }
+
+        .round-circle {
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            border: 1px solid black;
+            margin-right: 5px;
+            /* box-sizing: border-box; */
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            padding-top: 2px;
+
+        }
+
+        .round-circle>div {
+            height: 11px;
+            width: 11px;
+            border-radius: 50%;
+            border: 1px solid blue;
+            /* text-align: center; */
+            margin-top: 1px;
+            background-color: blue;
+        }
+
+        .heart-img {
+            position: absolute;
+            top: 2%;
+            right: 2%;
+        }
+
+
+        @media all and (min-width:540px) and (max-width:1080px) {
+            header>div {
                 justify-self: center;
                 column-gap: 5px;
 
             }
-            .express{
+
+            .express {
                 width: 0px;
                 padding: 0px;
                 background-color: white;
@@ -164,32 +256,55 @@
 
 
             }
+
             .search-container input {
-           
-            padding: 0 0 8px 5px;
-            margin-right: 5px;
-        }
-            
-        .express h4{
-            font-size: 14px;
-        }
-        nav{
-            justify-content: space-evenly;
-        }
-        .reebok-logo>img{
-            width: 100px;
+
+                padding: 0 0 8px 5px;
+                margin-right: 5px;
+            }
+
+            .express h4 {
+                font-size: 14px;
+            }
+
+            nav {
+                justify-content: space-evenly;
+            }
+
+            .reebok-logo>img {
+                width: 100px;
+            }
+
+            .search-container input {
+                width: 50px;
+            }
+
+            .grid-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .grid-container>div {
+
+                height: 450px;
+                padding: 0 10px 10px 10px;
+            }
         }
 
-        .search-container input{
-            width: 50px;
-        }
+        @media all and (max-width:539px) {
+            #header-nav {
+                background-color: brown;
+            }
+            .grid-container{
+                grid-template-columns: repeat(1, 1fr);
+            }
+            
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <div>
+    <header id="header-nav">
+        <div id="upper-nav">
             <p>MORE BRANDS <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
                     color="white" fill="none">
                     <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
@@ -245,7 +360,7 @@
             </div>
         </div>
 
-        <nav>
+        <nav id="lower-nav">
             <div class="container-nav">
                 <div class="reebok-logo">
                     <img src="https://imagescdn.reebok.in/img/app/brands/superapp/Icons/header_brand_logo_RBK.png?q=75&auto=format"
@@ -300,8 +415,153 @@
     </header>
 
     <main>
+        <div class="grid-container">
 
+
+            <div>
+                <div class="heart-img"><img
+                        src="https://imagescdn.reebok.in/img/app/brands/superapp/Icons/wishlist_icon_black.svg" alt="">
+                </div>
+                <div class="image-shoes">
+                    <img src="https://imagescdn.reebok.in/img/app/product/3/39621890-12718006.jpg?q=75&auto=format&w=387"
+                        alt="">
+                </div>
+                <div class="text">
+                    <div class="text-first">
+                        <p>RUNNING SHOES</p>
+                        <div class="sm-icon"><img
+                                src="https://imagescdn.reebok.in/img/app/brands/superapp/Icons/v-hicon-similar.svg"
+                                alt="">
+                        </div>
+                    </div>
+                    <h4>Reebok Mens Smooth Transition</h4>
+                    <h4>&#8377; 2,999</h4>
+
+                    <div class="circle-tick">
+                        <div class="round-circle">
+                            <div></div>
+                        </div>
+                        <p>Blue</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div>
+                <div class="image-shoes">
+                    <img src="https://imagescdn.reebok.in/img/app/product/3/39621890-12718006.jpg?q=75&auto=format&w=387"
+                        alt="">
+                </div>
+                <div class="text">
+                    <div class="text-first">
+                        <p>RUNNING SHOES</p>
+                        <div class="sm-icon"><img
+                                src="https://imagescdn.reebok.in/img/app/brands/superapp/Icons/v-hicon-similar.svg"
+                                alt="">
+                        </div>
+                    </div>
+                    <h4>Reebok Mens Smooth Transition</h4>
+                    <h4>&#8377; 2,999</h4>
+
+                    <div class="circle-tick">
+                        <div class="round-circle">
+                            <div></div>
+                        </div>
+                        <p>Blue</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="image-shoes">
+                    <img src="https://imagescdn.reebok.in/img/app/product/3/39621890-12718006.jpg?q=75&auto=format&w=387"
+                        alt="">
+                </div>
+                <div class="text">
+                    <div class="text-first">
+                        <p>RUNNING SHOES</p>
+                        <div class="sm-icon"><img
+                                src="https://imagescdn.reebok.in/img/app/brands/superapp/Icons/v-hicon-similar.svg"
+                                alt="">
+                        </div>
+                    </div>
+                    <h4>Reebok Mens Smooth Transition</h4>
+                    <h4>&#8377; 2,999</h4>
+
+                    <div class="circle-tick">
+                        <div class="round-circle">
+                            <div></div>
+                        </div>
+                        <p>Blue</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="image-shoes">
+                    <img src="https://imagescdn.reebok.in/img/app/product/3/39621890-12718006.jpg?q=75&auto=format&w=387"
+                        alt="">
+                </div>
+                <div class="text">
+                    <div class="text-first">
+                        <p>RUNNING SHOES</p>
+                        <div class="sm-icon"><img
+                                src="https://imagescdn.reebok.in/img/app/brands/superapp/Icons/v-hicon-similar.svg"
+                                alt="">
+                        </div>
+                    </div>
+                    <h4>Reebok Mens Smooth Transition</h4>
+                    <h4>&#8377; 2,999</h4>
+
+                    <div class="circle-tick">
+                        <div class="round-circle">
+                            <div></div>
+                        </div>
+                        <p>Blue</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="image-shoes">
+                    <img src="https://imagescdn.reebok.in/img/app/product/3/39621890-12718006.jpg?q=75&auto=format&w=387"
+                        alt="">
+                </div>
+                <div class="text">
+                    <div class="text-first">
+                        <p>RUNNING SHOES</p>
+                        <div class="sm-icon"><img
+                                src="https://imagescdn.reebok.in/img/app/brands/superapp/Icons/v-hicon-similar.svg"
+                                alt="">
+                        </div>
+                    </div>
+                    <h4>Reebok Mens Smooth Transition</h4>
+                    <h4>&#8377; 2,999</h4>
+
+                    <div class="circle-tick">
+                        <div class="round-circle">
+                            <div></div>
+                        </div>
+                        <p>Blue</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </main>
+
+    <script>
+        window.addEventListener('resize', function () {
+            var headerNav = document.getElementById('upper-nav')
+            var width = window.innerWidth
+            if (width < 540) {
+
+                headerNav.innerHTML = "<h2>More Brands</h2> "
+                
+            }
+        });
+
+    </script>
 </body>
 
 </html>
