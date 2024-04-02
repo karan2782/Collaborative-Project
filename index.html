@@ -128,7 +128,7 @@
 
         .express {
             color: white;
-            border: 1px solid black;
+            /* border: 1px solid black; */
             height: 46px;
             width: 245px;
             display: flex;
@@ -155,14 +155,14 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
-            border: 2px solid black;
+            /* border: 2px solid black; */
             width: 90%;
             margin: auto;
 
         }
 
         .grid-container>div {
-            border: 1px solid black;
+            /* border: 1px solid black; */
             height: 400px;
             padding-bottom: 10px;
             position: relative;
@@ -295,11 +295,26 @@
 
         @media all and (max-width:539px) {
             #header-nav {
-                background-color: brown;
+                font-size: 10px;
             }
             .grid-container{
                 grid-template-columns: repeat(1, 1fr);
             }
+            .reebok-logo>img {
+                width: 70px;
+            }
+            .express{
+                display: none;
+            }
+            .search-container input{
+                padding: 0;
+                margin: 0;
+                width: 20px;
+            }
+            .container-nav{
+                font-size: 10px;
+            }
+            
             
         }
     </style>
@@ -477,7 +492,7 @@
 
             <div>
                 <div class="image-shoes">
-                    <img src="https://imagescdn.reebok.in/img/app/product/3/39621890-12718006.jpg?q=75&auto=format&w=387"
+                    <img src="https://imagescdn.reebok.in/img/app/product/3/39620282-12677975.jpg?q=75&auto=format&w=387"
                         alt="">
                 </div>
                 <div class="text">
@@ -553,18 +568,7 @@
         </div>
     </main>
 
-    <script>
-        window.addEventListener('resize', function () {
-            var headerNav = document.getElementById('upper-nav')
-            var width = window.innerWidth
-            if (width < 540) {
-
-                headerNav.innerHTML = "<h2>More Brands</h2> "
-                
-            }
-        });
-
-    </script>
+    
 </body>
 
 </html>
